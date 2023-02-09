@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colby's Website</title>
+</head>
+<body>
+  <!-- Image -->
+  <img src="image/london.jpg.jpg" alt="london" width="500" height="500" />
+  
+  <!-- Extra Markup -->
+  <p Class="strong">London hosts all kinds of attractions that suit all sorts of preferences, and there's always something interesting going on in the city. London hosts a grand number of <em>attractions</em>, <em>museums</em>, <em>cultural</em> exhibits and adventures, and there's no reason to get bored.</p> 
+  
+  <!-- Form with onsubmit event -->
+  <form onsubmit="submitForm()">
+    <input type="text" name="name" placeholder="Enter your name">
+    <input type="email" name="email" placeholder="Enter your email">
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Table -->
+   <table board="2" bgcolor="#AW7011" width="400" cellpadding="10 cellspacing="5">
+  <tr bgcolor="grey">
+    <th width="150"></th>
+	<th>Pros</th>
+	<th>Cons</th>
+   </tr>
+   <tr bgcolor="grey">
+     <th>Visiting London</th>
+	 <td>The Nightlife</td>
+	 <td>What Con :)</td>
+	</tr>
+	<tr bgcolor="grey">
+	  <th>Not Visiting London</th>
+	  <td></td>
+	 <td>You'll miss out</td>
+	</tr>
+	</table>
+	
+  <!-- Form -->
+  <p>Will you visit this webpage again?</p>
+     <input type="checkbox" name="service"
+	   value="Yes" ckecked="ckecked" /> Yes
+	 <input type="checkbox" name="service"
+	   value="No" ckecked="ckecked" /> No
+	  <input type="checkbox" name="service"
+	   value="Maybe" ckecked="ckecked" /> Maybe
+	   <input type="submit" value="Submit">
+	  
+  <!-- Comments -->
+<p>What do you think of the website?</p>
+  <form onsubmit="submitComment()">
+    <textarea name="comment"></textarea>
+    <input type="submit" value="Post Comment">
+  </form>
+
+  <!-- iFrame -->
+  <iframe src=https://en.wikipedia.org/wiki/London" width="840" height="300">
+  </iframe>
+
+  <!-- Video -->
+  <video width="840" height="960" controls>
+		<source src="Image/logan 600 pounds.mp4" type='video/mp4'>
+	</video>
+
+
+  <!-- Geolocation -->
+  <button onclick="getLocation()">Get Location</button>
+  <p id="location"></p>
+
+  <script>
+    // Form submit function
+    function submitForm() {
+      // Code to submit form
+    }
+
+    // Comment submit function
+    function submitComment() {
+      // Code to submit comment
+    }
+
+    // Geolocation function
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>
+</body>
+</html>
